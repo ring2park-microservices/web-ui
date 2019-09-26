@@ -1,0 +1,46 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+<head th:replace="header :: copy"></head>
+
+<body>
+
+<h1>Ring2Park Microservices Demo</h1>
+<h3>Overview</h3>
+<ul>
+    <li>Aa simple web application for accessing parking locations and customer user data.</li>
+    <li>All the parking location and user information is fetched via a RESTful interface to relevant microservices.
+    </li>
+</ul>
+
+<h3>Demo</h3>
+
+<ul class="openlist">
+    <li>Eureka Dashboard: <a
+            href="http://localhost:1111">http://@eureka-server@:@eureka-port@</a></li>
+    <li>Check applications registered: <a
+            href="http://localhost:1111/eureka/apps/">http://@eureka-server@:@eureka-port@/eureka/apps/</a></li>
+
+    <li>Fetch all users: <a th:href="@{/users}">/users</a></li>
+    <li>Fetch a user by specific username: <a th:href="@{/users/username/fred}">/users/username/fred</a></li>
+    <li>User <a th:href="@{/users/search}">Search</a></li>
+</ul>
+
+<h3>Spring Boot URLs</h3>
+<p>Spring Boot RESTful URLs for interrogating the application (they return JSON format data):</p>
+
+<ul>
+    <li><a th:href="@{/actuator/beans}">The beans</a></li>
+    <li><a th:href="@{/actuator/env}">The environment</a></li>
+    <li><a th:href="@{/actuator/health}">Application health</a></li>
+    <li><a th:href="@{/actuator/info}">Application info</a></li>
+    <li><a th:href="@{/actuator/metrics}">Application metrics</a></li>
+    <li><a th:href="@{/actuator/logfile}">Request log file</a></li>
+</ul>
+
+<div th:replace="footer :: copy"></div>
+
+</body>
+</html>
+

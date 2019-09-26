@@ -1,0 +1,29 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+<head th:replace="header :: copy"></head>
+
+<body>
+<h1>User Details</h1>
+
+<dl class="dl-horizontal">
+    <dt>Id</dt>
+    <dd th:text="${user.id}">id</dd>
+    <dt>Username</dt>
+    <dd th:text="${user.username}">username</dd>
+    <dt>Name</dt>
+    <dd th:text="${user.name}">name</dd>
+</dl>
+
+<div style="height: 2cm">&nbsp;</div>
+
+<div style="text-align: right">
+    Options: <a th:href="@{/}">Home</a> | <a
+        th:href="@{/users/search}">Users Search</a>
+</div>
+
+<div th:replace="footer :: copy"></div>
+</body>
+</html>
+

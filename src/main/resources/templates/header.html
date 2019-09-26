@@ -1,0 +1,84 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+
+<head th:fragment="copy">
+    <title>Locations Server (Ring2Park Microservices Demo)</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no"
+          id="Viewport" name="viewport"/>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" media="screen"
+          th:href="@{/webjars/bootstrap/3.4.1/css/bootstrap.min.css}"
+          href="http://cdn.jsdelivr.net/webjars/bootstrap/4.3.1/css/bootstrap.css"/>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" media="screen"
+          th:href="@{/webjars/bootstrap/3.4.1/css/bootstrap-theme.min.css}"
+          href="//netdna.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-theme.min.css"/>
+
+    <link rel="stylesheet" href="/css/style.css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"
+         th:src="@{/webjars/html5shiv/3.7.3/html5shiv.js}"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"
+         th:src="@{/webjars/respond/1.4.2/dest/respond.min.js}"></script>
+    <![endif]-->
+</head>
+
+<body th:fragment="copy" class="container">
+<nav class="navbar navbar-default navbar-dark bg-primary" role="navigation"
+     style="margin-bottom: 2px;">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span> <span
+                class="icon-bar"></span>
+            <!-- Logo -->
+            <span class="icon-bar"></span>
+            <!-- Home -->
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+
+        </button>
+        <a href="/">
+            <img alt="Ring2Park" title="Ring2Park" height="40" style="padding-top:10px;"
+                 th:src="@{/images/logo.png}"
+                 src="/images/logo.png"/>
+        </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse"
+         id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/" th:href="@{/}">Home</a></li>
+            <li>
+                <a href="http://@eureka-server@:@eureka-port@">Eureka</a>
+            </li>
+            <li><a href="">Another Link</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="https://www.microfocus.com">
+                    <img alt="Micro Focus" title="Micro Focus" height="25"
+                     th:src="@{/images/mf_logo_black.png}"
+                     src="/images/mf_logo.png"/>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+</nav>
+</body>
+
+</html>
+

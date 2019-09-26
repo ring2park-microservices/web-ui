@@ -1,0 +1,43 @@
+/* - - - - - - - - - - - *
+       Local Styles
+ * - - - - - - - - - - - */
+
+/*
+body {
+    font-family: helvetica;
+    font-size: 13pt;
+}
+
+.navbar, .navbar > a {
+    font-family: helvetica;
+    font-size: 15pt;
+}
+
+ul.openlist li {
+    margin-bottom: 1em;
+}
+
+a {
+    font-family: helvetica;
+}
+
+code {
+    background-color: white;
+    border-radius: 0px;
+    color: #80A080;
+    font-size: 100%;
+    font-family: monospace;
+    padding: 0px;
+    white-space: nowrap;
+}*/
+
+.bg-primary {
+    background-color: #007bff!important;
+}
+
+footer {
+    margin-top: 3em;
+    border-top: 1px darkgray solid;
+    color:#0078ef;
+}
+

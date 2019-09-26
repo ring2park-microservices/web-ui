@@ -1,0 +1,49 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+<head th:replace="header :: copy"></head>
+
+<body>
+<h1>User Search</h1>
+
+<p>Enter a username to search for:</p>
+
+<form action="#" th:object="${searchCriteria}" method="GET"
+      th:action="@{/users/dosearch}" class="form-horizontal">
+
+    <!-- Username field -->
+    <div class="form-group">
+        <label for="search" class="control-label col-xs-2">Username:</label>
+        <div class="col-xs-2">
+            <input type="text" class="form-control" id="search"
+                   th:field="*{searchText}" placeholder="search string"
+                   style="width: 10em;"/>
+        </div>
+        <div class="col-xs-8">Case-insensitive, supports partial name matching
+        </div>
+    </div>
+
+    <!-- Username errors (if any) -->
+    <div class="form-group">
+        <div class="control-label col-xs-2">&nbsp;</div>
+        <div class="col-xs-2">&nbsp;</div>
+        <div class="col-xs-8">
+				<span th:if="${#fields.hasErrors('searchText')}"
+                      style="color: red; font-size: smaller" th:errors="*{searchText}"></span>
+        </div>
+    </div>
+
+    <!--  Submit button -->
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-10">
+            <button type="submit" class="btn btn-primary">Find</button>
+        </div>
+    </div>
+</form>
+
+<div th:replace="footer :: copy"></div>
+
+</body>
+</html>
+

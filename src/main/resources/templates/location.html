@@ -1,0 +1,41 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+<head th:replace="header :: copy"></head>
+
+<body>
+<h1>Location Details</h1>
+
+<dl class="dl-horizontal">
+    <dt>Number</dt>
+    <dd th:text="${location.number}">number</dd>
+    <dt>Name</dt>
+    <dd th:text="${location.name}">name</dd>
+    <dt>Address</dt>
+    <dd th:text="${location.address}">address</dd>
+    <dt>City</dt>
+    <dd th:text="${location.city}">city</dd>
+    <dt>State</dt>
+    <dd th:text="${location.state}">state</dd>
+    <dt>Zip</dt>
+    <dd th:text="${location.zip}">zip</dd>
+    <dt>Country</dt>
+    <dd th:text="${location.country}">country</dd>
+    <dt>Currency</dt>
+    <dd th:text="${location.currency}">currency</dd>
+    <dt>Price</dt>
+    <dd th:text="${location.price}">price</dd>
+</dl>
+
+<div style="height: 2cm">&nbsp;</div>
+
+<div style="text-align: right">
+    Options: <a th:href="@{/}">Home</a> | <a
+        th:href="@{/locations/search}">Location Search</a>
+</div>
+
+<div th:replace="footer :: copy"></div>
+</body>
+</html>
+
